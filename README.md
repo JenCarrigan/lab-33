@@ -6,37 +6,35 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com)
-* [front-end](http://xyz.com)
+* [sandbox](https://codesandbox.io/s/50qk4x7k7k)
 
 ### Modules
-#### `modulename.js`
-##### Exported Values and Methods
+#### `index.js`
+Creates redux store and passes it down for use
+Renders App
 
-###### `foo(thing) -> string`
-Usage Notes or examples
+#### `store/index.js`
+Exports the store with reducers and middleware
 
-###### `bar(array) -> array`
-Usage Notes or examples
+#### `actions.js`
+Functions get and getOne will generate actions that will either get all people or just one person
 
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
+#### `reducers.js`
+Updates and exports state depending on action
 
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
+#### `app.js`
+App class has methods that will fetch people from Swapi API or a single person.
+Has functions that map state to props and dispatch to props
+Renders Link and List
 
-#### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+#### `link.js`
+Link class renders a link to get people from Swapi
+
+#### `list.js`
+List class renders people and class Details
+
+#### `details.js`
+Details class renders a single person
 
 #### UML
-Link to an image of the UML for your application and response to events
+![UML](https://raw.githubusercontent.com/JenCarrigan/data-structures-and-algorithms/master/%3Aassets/lab33UML.jpg)
